@@ -1,353 +1,374 @@
 <!doctype html>
 <html lang="th">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Doll Shop</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body class="bg-gray-100">
-    <!-- Navbar -->
-    <nav
-      id="navbar"
-      class="sticky top-0 z-50 w-full px-6 py-1 md:px-20 shadow-sm bg-white"
-    >
-      <div class="flex justify-between items-center py-5">
-        <a href="Home.html" class="text-2xl font-bold text-purple-400">
-          Made<span class="text-rose-300">4U</span>
-        </a>
 
-        <div class="hidden md:flex gap-6 text-black">
-          <a href="Home.html" class="hover:scale-110 transition">🏠</a>
-          <a href="Cart.html" class="hover:scale-110 transition"> 🛒 </a>
-          <a href="Tracking.html" class="hover:scale-110 transition"> 📦 </a>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Doll Shop</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css" />
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/4.0.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/4.0.0/uicons-brands/css/uicons-brands.css'>
+</head>
 
-        <div class="md:hidden">
-          <button onclick="toggleMenu()" class="text-2xl">☰</button>
-        </div>
+<body class="bg-gray-50">
+  <!-- Navbar -->
+  <nav id="navbar" class="sticky top-0 z-50 w-full px-6 py-1 md:px-20 shadow-md bg-white">
+    <div class="flex justify-between items-center py-5">
+      <a href="Home.html" class="text-2xl font-bold text-purple-400">
+        Made<span class="text-rose-300">4U</span>
+      </a>
+
+      <div class="hidden md:flex gap-6 text-black">
+        <a href="Home.html" class="hover:scale-125 transition"><i class="fi fi-br-home"></i></a>
+        <a href="Cart.html" class="hover:scale-125 transition"><i class="fi fi-br-shopping-cart"></i> </a>
+        <a href="Orders.html" class="hover:scale-125 transition"><i class="fi fi-br-box-alt"></i> </a>
       </div>
 
-      <div
-        id="mobileMenu"
-        class="hidden md:hidden bg-white py-4 px-4 flex flex-col gap-4 border-t border-gray-300"
-      >
-        <div class="flex gap-10 mt-4 text-lg justify-center">
-          <a href="Home.html">🏠 หน้าแรก</a>
-          <a href="Cart.html">🛒 ตะกร้า</a>
-          <a href="Tracking.html">📦 รายการสินค้า</a>
-        </div>
+      <div class="md:hidden">
+        <button onclick="toggleMenu()" class="text-2xl">☰</button>
       </div>
-    </nav>
+    </div>
 
-    <header
-      class="p-10 md:px-20 bg-cover bg-center flex items-center lg:h-[500px]"
-    >
-      <div class="w-1/2">
-        <h1 class="md:text-5xl font-bold text-gray-700 leading-tight text-2xl">
-          ออกแบบตุ๊กตาในแบบของคุณ <br />
-          ให้เป็นของขวัญที่พิเศษ!
-        </h1>
-        <p class="mt-4 text-gray-600 md:text-lg text-sm">
-          ให้คุณได้ครอบครองความเป็นเอกลักษณ์และความพิเศษในแบบของตัวเอง
-        </p>
-        <button
-          onclick="scrollToShop()"
-          class="mt-6 bg-rose-300 text-white px-8 py-2 rounded-full hover:bg-rose-400 transition"
-        >
-          สั่งซื้อเลย!
+    <div id="mobileMenu" class="hidden md:hidden bg-white py-4 px-4 flex flex-col gap-4 border-t border-gray-300">
+      <div class="flex gap-10 mt-4 text-md justify-center align-middle">
+        <a href="Home.html" class="hover:scale-105 transition"><i class="fi fi-br-home"></i> หน้าแรก</a>
+        <a href="Cart.html" class="hover:scale-105 transition"><i class="fi fi-br-shopping-cart"></i> ตะกร้า</a>
+        <a href="Orders.html" class="hover:scale-105 transition"><i class="fi fi-br-box-alt"></i> รายการสินค้า</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="p-10 md:px-20 bg-cover bg-center flex items-center lg:h-[500px]">
+    <div class="w-1/2">
+      <h1 class="md:text-5xl font-bold text-gray-700 leading-tight text-2xl">
+        ออกแบบตุ๊กตาในแบบของคุณ <br />
+        ให้เป็นของขวัญที่พิเศษ!
+      </h1>
+      <p class="mt-4 text-gray-600 md:text-lg text-sm">
+        ให้คุณได้ครอบครองความเป็นเอกลักษณ์และความพิเศษในแบบของตัวเอง
+      </p>
+      <button onclick="scrollToShop()"
+        class="mt-6 bg-rose-300 text-white px-8 py-2 rounded-full hover:bg-rose-400 transition">
+        สั่งซื้อเลย!
+      </button>
+    </div>
+  </header>
+
+  <section id="shop" class="flex gap-8 p-6 md:p-16">
+    <aside class="w-64 bg-white p-6 rounded-xl shadow-md border">
+      <h2 class="text-lg md:text-2xl text-rose-300 font-semibold">ตัวกรอง</h2>
+
+      <hr class="my-4" />
+
+      <h3 class="mb-3 font-medium text-sm md:text-base">หมวดหมู่</h3>
+      <div class="flex flex-wrap gap-2 text-xs md:text-base">
+        <button class="category-buttons px-4 py-1 bg-rose-300 text-white rounded-full">
+          ทั้งหมด
+        </button>
+        <button class="category-buttons px-4 py-1 bg-gray-100 rounded-full">Pillow</button>
+        <button class="category-buttons px-4 py-1 bg-gray-100 rounded-full">Doll</button>
+      </div>
+
+      <hr class="my-4" />
+
+      <h3 class="mb-3 font-medium text-sm md:text-base">ราคา</h3>
+      <input type="range" min="100" max="1000" value="1000" id="priceRange" class="w-full accent-rose-300" />
+
+      <p id="priceValue" class="text-center text-gray-600 mt-2">
+        ราคาไม่เกิน 1000 บาท
+      </p>
+
+      <hr class="my-4" />
+
+      <h3 class="mb-3 font-medium text-sm md:text-base">ประเภท</h3>
+      <div class="flex flex-wrap gap-2 text-xs md:text-base">
+        <button class="type-buttons px-4 py-1 bg-rose-300 text-white rounded-full">
+          ทั้งหมด
+        </button>
+        <button class="type-buttons px-4 py-1 bg-gray-100 rounded-full">
+          Cute
+        </button>
+        <button class="type-buttons px-4 py-1 bg-gray-100 rounded-full">
+          Minimal
+        </button>
+        <button class="type-buttons px-4 py-1 bg-gray-100 rounded-full">
+          Fancy
         </button>
       </div>
-    </header>
+    </aside>
 
-    <section id="shop" class="flex gap-8 p-6 md:p-16">
-      <aside class="w-64 bg-white p-6 rounded-xl shadow-md border">
-        <h2 class="text-lg md:text-2xl text-rose-300 font-semibold">ตัวกรอง</h2>
+    <div class="flex-1">
+      <h1 class="text-xl md:text-4xl text-rose-300 mb-8">ร้านค้า</h1>
 
-        <hr class="my-4" />
+      <div id="product-list" class="grid lg:grid-cols-3 md:grid-cols-2 xl:grid-cols-4 gap-6"></div>
 
-        <h3 class="mb-3 font-medium text-sm md:text-base">หมวดหมู่</h3>
-        <div class="flex flex-wrap gap-2 text-xs md:text-base">
-          <button class="category-buttons px-4 py-1 bg-rose-300 text-white rounded-full">
-            ทั้งหมด
-          </button>
-          <button class="category-buttons px-4 py-1 bg-gray-100 rounded-full">Pillow</button>
-          <button class="category-buttons px-4 py-1 bg-gray-100 rounded-full">Doll</button>
-        </div>
+      <div id="pagination" class="flex justify-center gap-2 mt-10"></div>
+    </div>
+  </section>
 
-        <hr class="my-4" />
+  <!-- Footer -->
+  <footer class="bg-white py-10 mt-auto text-center md:text-left">
+    <div class="max-w-6xl mx-auto px-8 flex flex-col md:flex-row justify-between gap-8">
+      <div class="flex-1">
+        <h2 class="text-3xl font-bold text-purple-400">
+          Made<span class="text-rose-300">4U</span>
+        </h2>
 
-        <h3 class="mb-3 font-medium text-sm md:text-base">ราคา</h3>
-        <input type="range" class="w-full accent-rose-300" />
-        <p class="text-center text-gray-600 mt-2 text-sm md:text-base">
-          100 - 300 บาท
+        <p class="mt-4 text-sm text-gray-600">
+          ออกแบบดีไซน์ในแบบของคุณ<br />
+          ให้คุณได้ครอบครองความเป็นเอกลักษณ์<br />
+          และความพิเศษในแบบของตัวเอง
         </p>
 
-        <hr class="my-4" />
-
-        <h3 class="mb-3 font-medium text-sm md:text-base">ประเภท</h3>
-        <div class="flex flex-wrap gap-2 text-xs md:text-base">
-          <button class="type-buttons px-4 py-1 bg-gray-100 rounded-full">
-            Cute
-          </button>
-          <button class="type-buttons px-4 py-1 bg-gray-100 rounded-full">
-            Minimal
-          </button>
-          <button class="type-buttons px-4 py-1 bg-gray-100 rounded-full">
-            Fancy
-          </button>
-        </div>
-      </aside>
-
-      <div class="flex-1">
-        <h1 class="text-xl md:text-4xl text-rose-300 mb-8">ร้านค้า</h1>
-
-        <div class="grid lg:grid-cols-4 md:grid-cols-2 gap-6">
-          <a
-            href="ProductDetail.html"
-            class="bg-white p-4 rounded-xl shadow hover:shadow-lg transition w-fit"
-          >
-            <img
-              class="h-60 w-60 bg-gray-200 rounded mb-4 object-cover"
-              src="../Project/img-doll/CategoryPage-img01.png"
-              alt="ตุ้กตาเป็ด"
-            />
-            <h3 class="font-semibold md:text-lg">K Doll</h3>
-            <p class="text-gray-500 text-sm md:text-base">Doll</p>
-            <p class="text-rose-300 font-bold mt-2">200 บาท</p>
+        <!-- Social -->
+        <div class="flex justify-center md:justify-start gap-4 mt-6 text-xl">
+          <!-- Twitter -->
+          <a href="#" class="text-gray-500 hover:text-gray-800">
+            <i class="fi fi-brands-twitter-alt"></i>
           </a>
 
-          <a
-            href="ProductDetail.html"
-            class="bg-white p-4 rounded-xl shadow hover:shadow-lg transition w-fit"
-          >
-            <img
-              class="h-60 w-60 bg-gray-200 rounded mb-4 object-cover"
-              src="../Project/img-doll/CategoryPage-img02.jpg"
-              alt="ตุ้กตาหยดน้ำ"
-            />
-            <h3 class="font-semibold md:text-lg">Minimal Doll</h3>
-            <p class="text-gray-500 text-sm md:text-base">Doll</p>
-            <p class="text-rose-300 font-bold mt-2">150 บาท</p>
+          <!-- Facebook -->
+          <a href="#" class="text-gray-500 hover:text-gray-800">
+            <i class="fi fi-brands-facebook"></i>
           </a>
 
-          <a
-            href="ProductDetail.html"
-            class="bg-white p-4 rounded-xl shadow hover:shadow-lg transition w-fit"
-          >
-            <img
-              class="h-60 w-60 bg-gray-200 rounded mb-4 object-cover"
-              src="../Project/img-doll/CategoryPage-img03.jpg"
-              alt="ตุ้กตาแมว"
-            />
-            <h3 class="font-semibold md:text-lg">Fancy Doll</h3>
-            <p class="text-gray-500 text-sm md:text-base">Doll</p>
-            <p class="text-rose-300 font-bold mt-2">300 บาท</p>
+          <!-- Instagram -->
+          <a href="#" class="text-gray-500 hover:text-gray-800">
+            <i class="fi fi-brands-instagram"></i>
           </a>
 
-          <a
-            href="ProductDetail.html"
-            class="bg-white p-4 rounded-xl shadow hover:shadow-lg transition w-fit"
-          >
-            <img
-              class="h-60 w-60 bg-gray-200 rounded mb-4 object-cover"
-              src="../Project/img-doll/CategoryPage-img04.jpg"
-              alt="ตุ้กตาตัวตลก"
-            />
-            <h3 class="font-semibold md:text-lg">Cute Doll</h3>
-            <p class="text-gray-500 text-sm md:text-base">Doll</p>
-            <p class="text-rose-300 font-bold mt-2">180 บาท</p>
+          <!-- GitHub -->
+          <a href="#" class="text-gray-500 hover:text-gray-800">
+            <i class="fi fi-brands-github"></i>
           </a>
-        </div>
-
-        <div class="flex justify-center gap-2 mt-10">
-          <button
-            class="px-3 py-1 border rounded bg-white hover:bg-gray-200 rounded-full"
-          >
-            Previous
-          </button>
-          <button
-            class="px-3 py-1 border rounded rounded-full bg-white hover:bg-gray-200"
-          >
-            1
-          </button>
-          <button
-            class="px-3 py-1 border rounded rounded-full bg-white hover:bg-gray-200"
-          >
-            2
-          </button>
-          <button
-            class="px-3 py-1 border rounded rounded-full bg-white hover:bg-gray-200"
-          >
-            Next
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-white py-10 mt-auto text-center md:text-left">
-      <div
-        class="max-w-6xl mx-auto px-8 flex flex-col md:flex-row justify-between gap-8"
-      >
-        <div class="flex-1">
-          <h2 class="text-3xl font-bold text-purple-400">
-            Made<span class="text-rose-300">4U</span>
-          </h2>
-
-          <p class="mt-4 text-sm text-gray-600">
-            ออกแบบดีไซน์ในแบบของคุณ<br />
-            ให้คุณได้ครอบครองความเป็นเอกลักษณ์<br />
-            และความพิเศษในแบบของตัวเอง
-          </p>
-
-          <!-- Social -->
-          <div class="flex justify-center md:justify-start gap-4 mt-6">
-            <!-- Twitter -->
-            <a href="#" class="text-gray-500 hover:text-gray-800">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="w-6 h-6 fill-current"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M22.46 6c-.77.35-1.6.58-2.46.69
-            .88-.53 1.56-1.37 1.88-2.38
-            -.83.49-1.75.84-2.72 1.03
-            -.78-.83-1.9-1.35-3.14-1.35
-            -2.37 0-4.29 1.92-4.29 4.29
-            0 .34.04.67.11.99
-            -3.57-.18-6.73-1.89-8.85-4.49
-            -.37.63-.58 1.37-.58 2.16
-            0 1.49.76 2.8 1.91 3.57
-            -.7-.02-1.36-.21-1.94-.53v.05
-            c0 2.08 1.48 3.82 3.44 4.21
-            -.36.1-.74.15-1.13.15
-            -.28 0-.55-.03-.81-.08
-            .55 1.72 2.14 2.97 4.03 3
-            -1.48 1.16-3.34 1.85-5.37 1.85
-            -.35 0-.69-.02-1.03-.06
-            1.91 1.23 4.18 1.95 6.63 1.95
-            7.95 0 12.3-6.59 12.3-12.3
-            0-.19-.01-.38-.02-.57
-            .85-.62 1.58-1.4 2.16-2.29z"
-                />
-              </svg>
-            </a>
-
-            <!-- Facebook -->
-            <a href="#" class="text-gray-500 hover:text-gray-800">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="w-6 h-6 fill-current"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M22 12a10 10 0 10-11.63 9.87v-6.99H7.9v-2.88h2.47V9.41
-            c0-2.44 1.46-3.79 3.7-3.79
-            1.07 0 2.19.19 2.19.19v2.4h-1.23
-            c-1.21 0-1.59.75-1.59 1.52v1.83h2.7
-            l-.43 2.88h-2.27v6.99A10 10 0 0022 12z"
-                />
-              </svg>
-            </a>
-
-            <!-- Instagram -->
-            <a href="#" class="text-gray-500 hover:text-gray-800">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="w-6 h-6 fill-current"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm4.25 5.5A4.5 4.5 0 1016.5 12
-            4.5 4.5 0 0012 7.5zm5.25-.88a1.13 1.13 0 11-1.13-1.12 1.13 1.13 0 011.13 1.12z"
-                />
-              </svg>
-            </a>
-
-            <!-- GitHub -->
-            <a href="#" class="text-gray-500 hover:text-gray-800">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="w-6 h-6 fill-current"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M12 .5a11.5 11.5 0 00-3.64 22.43
-            c.58.11.79-.25.79-.56v-2.17
-            c-3.23.7-3.91-1.56-3.91-1.56
-            -.53-1.35-1.29-1.7-1.29-1.7
-            -1.05-.72.08-.7.08-.7
-            1.16.08 1.77 1.2 1.77 1.2
-            1.03 1.76 2.7 1.25 3.36.95
-            .1-.75.4-1.25.73-1.54
-            -2.58-.29-5.29-1.29-5.29-5.74
-            0-1.27.45-2.3 1.2-3.11
-            -.12-.29-.52-1.45.11-3.03
-            0 0 .98-.31 3.2 1.19
-            a11.1 11.1 0 015.82 0
-            c2.22-1.5 3.2-1.19 3.2-1.19
-            .63 1.58.23 2.74.11 3.03
-            .75.81 1.2 1.84 1.2 3.11
-            0 4.46-2.71 5.44-5.3 5.73
-            .41.36.77 1.07.77 2.16v3.2
-            c0 .31.21.68.8.56A11.5 11.5 0 0012 .5z"
-                />
-              </svg>
-            </a>
-          </div>
-        </div>
-
-        <div class="flex-1 text-center md:text-right">
-          <h3 class="font-semibold mb-2">RESOURCES</h3>
-          <ul class="space-y-2 text-sm text-gray-600">
-            <li><a href="#" class="hover:text-gray-800">Free eBooks</a></li>
-            <li>
-              <a href="#" class="hover:text-gray-800">Development Tutorial</a>
-            </li>
-            <li><a href="#" class="hover:text-gray-800">How to - Blog</a></li>
-            <li>
-              <a href="#" class="hover:text-gray-800">Youtube Playlist</a>
-            </li>
-          </ul>
         </div>
       </div>
 
-      <div class="text-center text-xs text-gray-500 mt-8">
-        Shop.co © 2000-2023, All Rights Reserved
+      <div class="flex-1 text-center md:text-right">
+        <h3 class="font-semibold mb-2">RESOURCES</h3>
+        <ul class="space-y-2 text-sm text-gray-600">
+          <li><a href="#" class="hover:text-gray-800">Free eBooks</a></li>
+          <li>
+            <a href="#" class="hover:text-gray-800">Development Tutorial</a>
+          </li>
+          <li><a href="#" class="hover:text-gray-800">How to - Blog</a></li>
+          <li>
+            <a href="#" class="hover:text-gray-800">Youtube Playlist</a>
+          </li>
+        </ul>
       </div>
-    </footer>
+    </div>
 
-    <script>
-      function toggleMenu() {
-        const menu = document.getElementById("mobileMenu");
-        menu.classList.toggle("hidden");
+    <div class="text-center text-xs text-gray-500 mt-8">
+      Shop.co © 2000-2023, All Rights Reserved
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("mobileMenu");
+      menu.classList.toggle("hidden");
+    }
+
+    function scrollToShop() {
+      document.getElementById("shop").scrollIntoView({
+        behavior: "smooth",
+      });
+    }
+
+    // ข้อมูลสินค้า
+    const products = [
+      {
+        name: "K Doll",
+        category: "Doll",
+        type: "Cute",
+        price: 259,
+        img: "../img-doll/CategoryPage-img01.png",
+      },
+      {
+        name: "Minimal Doll",
+        category: "Doll",
+        type: "Minimal",
+        price: 159,
+        img: "../img-doll/CategoryPage-img02.jpg",
+      },
+      {
+        name: "Fancy Doll",
+        category: "Doll",
+        type: "Fancy",
+        price: 399,
+        img: "../img-doll/CategoryPage-img03.jpg",
+      },
+      {
+        name: "Cute Doll",
+        category: "Doll",
+        type: "Cute",
+        price: 189,
+        img: "../img-doll/CategoryPage-img04.jpg",
+      },
+      {
+        name: "Custom Pillow",
+        category: "Pillow",
+        type: "Cute",
+        price: 129,
+        img: "../img-doll/CategoryPage-img10.jpg",
+      },
+    ];
+
+    let selectedCategory = "ทั้งหมด";
+    let selectedType = "ทั้งหมด";
+    let maxPrice = 1000;
+
+    let currentPage = 1;
+    const itemsPerPage = 12;
+
+    // แสดงสินค้า    
+    function renderProducts() {
+      const container = document.getElementById("product-list");
+      const pagination = document.getElementById("pagination");
+
+      const filtered = products.filter((p) => {
+        const categoryMatch =
+          selectedCategory === "ทั้งหมด" || p.category === selectedCategory;
+
+        const typeMatch = selectedType === "ทั้งหมด" || p.type === selectedType;
+
+        const priceMatch = p.price <= maxPrice;
+
+        return categoryMatch && typeMatch && priceMatch;
+      });
+
+      const totalPages = Math.ceil(filtered.length / itemsPerPage);
+
+      const start = (currentPage - 1) * itemsPerPage;
+      const paginatedItems = filtered.slice(start, start + itemsPerPage);
+
+      container.innerHTML = "";
+
+      paginatedItems.forEach((p) => {
+        const card = `
+        <a href="ProductDetail.html"
+        class="bg-white p-4 rounded-xl shadow hover:shadow-lg hover:scale-105 transition w-fit">
+
+          <img class="h-36 w-48 md:h-48 md:w-52 lg:w-60 rounded mb-4 object-cover"
+          src="${p.img}" />
+
+          <h3 class="font-semibold text-lg">${p.name}</h3>
+
+          <p class="text-gray-500">${p.category}</p>
+
+          <p class="text-rose-300 font-bold mt-2">${p.price} บาท</p>
+
+        </a>
+        `;
+
+        container.innerHTML += card;
+      });
+
+      renderPagination(totalPages);
+    }
+
+    // เลื่อนหน้าสินค้า
+    function renderPagination(totalPages) {
+
+      const pagination = document.getElementById("pagination");
+
+      pagination.innerHTML = "";
+
+      if (currentPage > 1) {
+
+        pagination.innerHTML += `
+      <button onclick="changePage(${currentPage - 1})"
+      class="px-3 py-1 border rounded-full hover:bg-gray-200">
+      Previous
+      </button>
+    `;
+
       }
 
-      function scrollToShop() {
-        document.getElementById("shop").scrollIntoView({
-          behavior: "smooth",
-        });
+      for (let i = 1; i <= totalPages; i++) {
+
+        pagination.innerHTML += `
+      <button onclick="changePage(${i})"
+      class="px-3 py-1 border rounded-full 
+      ${currentPage === i ? "bg-rose-300 text-white" : "bg-white"}">
+      ${i}
+      </button>
+    `;
+
       }
 
-      function setupSingleSelect(buttons) {
-        buttons.forEach((btn) => {
-          btn.addEventListener("click", function () {
-            buttons.forEach((b) =>
-              b.classList.remove("bg-rose-300", "text-white"),
-            );
-            this.classList.add("bg-rose-300", "text-white");
-          });
-        });
+      if (currentPage < totalPages) {
+
+        pagination.innerHTML += `
+      <button onclick="changePage(${currentPage + 1})"
+      class="px-3 py-1 border rounded-full hover:bg-gray-200">
+      Next
+      </button>
+    `;
+
       }
 
-      const categoryButtons = document.querySelectorAll(".category-buttons");
-      const typeButtons = document.querySelectorAll(".type-buttons");
+    }
 
-      setupSingleSelect(categoryButtons);
-      setupSingleSelect(typeButtons);
-    </script>
-  </body>
+    function changePage(page) {
+
+      currentPage = page;
+
+      renderProducts();
+
+    }
+
+    // ฟิลเตอร์หมวดหมู่สินค้า
+    const categoryButtons = document.querySelectorAll(".category-buttons");
+
+    categoryButtons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+
+        categoryButtons.forEach((b) =>
+          b.classList.remove("bg-rose-300", "text-white")
+        );
+
+        btn.classList.add("bg-rose-300", "text-white");
+
+        selectedCategory = btn.textContent.trim();
+        currentPage = 1;
+        renderProducts();
+      });
+    });
+
+    // ฟิลเตอร์ประเภทสินค้า
+    const typeButtons = document.querySelectorAll(".type-buttons");
+
+    typeButtons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        typeButtons.forEach((b) =>
+          b.classList.remove("bg-rose-300", "text-white"),
+        );
+
+        btn.classList.add("bg-rose-300", "text-white");
+
+        selectedType = btn.textContent.trim();
+        currentPage = 1;
+        renderProducts();
+      });
+    });
+
+    // ฟิลเตอร์ราคาสินค้า
+    const priceSlider = document.getElementById("priceRange");
+    const priceText = document.getElementById("priceValue");
+
+    priceSlider.addEventListener("input", () => {
+      maxPrice = priceSlider.value;
+
+      priceText.textContent = `ราคาไม่เกิน ${maxPrice} บาท`;
+      currentPage = 1;
+      renderProducts();
+    });
+
+    renderProducts();
+  </script>
+</body>
+
 </html>
